@@ -8,20 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		7B0FE93521E0EF9400226EB7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0FE93421E0EF9400226EB7 /* AppDelegate.swift */; };
-		7B0FE93721E0EF9400226EB7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0FE93621E0EF9400226EB7 /* ViewController.swift */; };
 		7B0FE93A21E0EF9400226EB7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B0FE93821E0EF9400226EB7 /* Main.storyboard */; };
 		7B0FE93C21E0EF9600226EB7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B0FE93B21E0EF9600226EB7 /* Assets.xcassets */; };
-		7B0FE93F21E0EF9600226EB7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B0FE93D21E0EF9600226EB7 /* LaunchScreen.storyboard */; };
+		7B0FE95421E0F78300226EB7 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0FE95321E0F78300226EB7 /* MainViewController.swift */; };
+		7B0FE95621E0F7C900226EB7 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0FE95521E0F7C900226EB7 /* HomeTableViewController.swift */; };
+		7B0FE95821E0F7E700226EB7 /* DiscoverTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0FE95721E0F7E700226EB7 /* DiscoverTableViewController.swift */; };
+		7B0FE95A21E0F7FF00226EB7 /* MessageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0FE95921E0F7FF00226EB7 /* MessageTableViewController.swift */; };
+		7B0FE95C21E0F82100226EB7 /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0FE95B21E0F82100226EB7 /* ProfileTableViewController.swift */; };
+		7B0FE96321E122EB00226EB7 /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0FE96221E122EB00226EB7 /* UIButton+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		7B0FE93121E0EF9400226EB7 /* weibo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = weibo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B0FE93421E0EF9400226EB7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7B0FE93621E0EF9400226EB7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		7B0FE93921E0EF9400226EB7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7B0FE93B21E0EF9600226EB7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		7B0FE93E21E0EF9600226EB7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7B0FE94021E0EF9600226EB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7B0FE95321E0F78300226EB7 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		7B0FE95521E0F7C900226EB7 /* HomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
+		7B0FE95721E0F7E700226EB7 /* DiscoverTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverTableViewController.swift; sourceTree = "<group>"; };
+		7B0FE95921E0F7FF00226EB7 /* MessageTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageTableViewController.swift; sourceTree = "<group>"; };
+		7B0FE95B21E0F82100226EB7 /* ProfileTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewController.swift; sourceTree = "<group>"; };
+		7B0FE96221E122EB00226EB7 /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +62,114 @@
 		7B0FE93321E0EF9400226EB7 /* weibo */ = {
 			isa = PBXGroup;
 			children = (
+				7B0FE94821E0F68D00226EB7 /* Classes */,
 				7B0FE93421E0EF9400226EB7 /* AppDelegate.swift */,
-				7B0FE93621E0EF9400226EB7 /* ViewController.swift */,
 				7B0FE93821E0EF9400226EB7 /* Main.storyboard */,
 				7B0FE93B21E0EF9600226EB7 /* Assets.xcassets */,
-				7B0FE93D21E0EF9600226EB7 /* LaunchScreen.storyboard */,
 				7B0FE94021E0EF9600226EB7 /* Info.plist */,
 			);
 			path = weibo;
+			sourceTree = "<group>";
+		};
+		7B0FE94821E0F68D00226EB7 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				7B0FE94921E0F68D00226EB7 /* ViewModel */,
+				7B0FE94A21E0F68D00226EB7 /* Tools */,
+				7B0FE94B21E0F68D00226EB7 /* Model */,
+				7B0FE94C21E0F68D00226EB7 /* View */,
+				7B0FE95221E0F68D00226EB7 /* Lib */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		7B0FE94921E0F68D00226EB7 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		7B0FE94A21E0F68D00226EB7 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				7B0FE95D21E11F3100226EB7 /* Extension */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		7B0FE94B21E0F68D00226EB7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7B0FE94C21E0F68D00226EB7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7B0FE94D21E0F68D00226EB7 /* Home */,
+				7B0FE94E21E0F68D00226EB7 /* Discover */,
+				7B0FE94F21E0F68D00226EB7 /* Message */,
+				7B0FE95021E0F68D00226EB7 /* Profile */,
+				7B0FE95121E0F68D00226EB7 /* Main */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7B0FE94D21E0F68D00226EB7 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				7B0FE95521E0F7C900226EB7 /* HomeTableViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		7B0FE94E21E0F68D00226EB7 /* Discover */ = {
+			isa = PBXGroup;
+			children = (
+				7B0FE95721E0F7E700226EB7 /* DiscoverTableViewController.swift */,
+			);
+			path = Discover;
+			sourceTree = "<group>";
+		};
+		7B0FE94F21E0F68D00226EB7 /* Message */ = {
+			isa = PBXGroup;
+			children = (
+				7B0FE95921E0F7FF00226EB7 /* MessageTableViewController.swift */,
+			);
+			path = Message;
+			sourceTree = "<group>";
+		};
+		7B0FE95021E0F68D00226EB7 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				7B0FE95B21E0F82100226EB7 /* ProfileTableViewController.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		7B0FE95121E0F68D00226EB7 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				7B0FE95321E0F78300226EB7 /* MainViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		7B0FE95221E0F68D00226EB7 /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Lib;
+			sourceTree = "<group>";
+		};
+		7B0FE95D21E11F3100226EB7 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				7B0FE96221E122EB00226EB7 /* UIButton+Extension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -122,7 +230,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7B0FE93F21E0EF9600226EB7 /* LaunchScreen.storyboard in Resources */,
 				7B0FE93C21E0EF9600226EB7 /* Assets.xcassets in Resources */,
 				7B0FE93A21E0EF9400226EB7 /* Main.storyboard in Resources */,
 			);
@@ -135,8 +242,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7B0FE93721E0EF9400226EB7 /* ViewController.swift in Sources */,
+				7B0FE95C21E0F82100226EB7 /* ProfileTableViewController.swift in Sources */,
+				7B0FE95621E0F7C900226EB7 /* HomeTableViewController.swift in Sources */,
 				7B0FE93521E0EF9400226EB7 /* AppDelegate.swift in Sources */,
+				7B0FE95A21E0F7FF00226EB7 /* MessageTableViewController.swift in Sources */,
+				7B0FE95821E0F7E700226EB7 /* DiscoverTableViewController.swift in Sources */,
+				7B0FE95421E0F78300226EB7 /* MainViewController.swift in Sources */,
+				7B0FE96321E122EB00226EB7 /* UIButton+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -149,14 +261,6 @@
 				7B0FE93921E0EF9400226EB7 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		7B0FE93D21E0EF9600226EB7 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7B0FE93E21E0EF9600226EB7 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -282,9 +386,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = D86GL839U9;
 				INFOPLIST_FILE = weibo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -292,7 +398,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.yyw.test.weibo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -300,9 +406,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = D86GL839U9;
 				INFOPLIST_FILE = weibo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -310,7 +418,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.yyw.test.weibo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
