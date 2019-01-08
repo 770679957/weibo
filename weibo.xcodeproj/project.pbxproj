@@ -18,6 +18,7 @@
 		7B0FE96321E122EB00226EB7 /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0FE96221E122EB00226EB7 /* UIButton+Extension.swift */; };
 		7B12454B21E2458B0056C342 /* VisitorTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B12454A21E2458B0056C342 /* VisitorTableViewController.swift */; };
 		7B12454E21E24F590056C342 /* VisitorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B12454D21E24F590056C342 /* VisitorView.swift */; };
+		7B37AE3921E48E6600298CBC /* OAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B37AE3821E48E6600298CBC /* OAuthViewController.swift */; };
 		7B4B2D7F21E39BC20099DAA3 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 7B4B2D7E21E39BC20099DAA3 /* Podfile */; };
 		7B4B2D8221E3B2070099DAA3 /* fff.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B4B2D8121E3B2070099DAA3 /* fff.m */; };
 		7B4B2D8421E3B27B0099DAA3 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B4B2D8321E3B27B0099DAA3 /* ImageIO.framework */; };
@@ -41,6 +42,7 @@
 		7B0FE96221E122EB00226EB7 /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
 		7B12454A21E2458B0056C342 /* VisitorTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisitorTableViewController.swift; sourceTree = "<group>"; };
 		7B12454D21E24F590056C342 /* VisitorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisitorView.swift; sourceTree = "<group>"; };
+		7B37AE3821E48E6600298CBC /* OAuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAuthViewController.swift; sourceTree = "<group>"; };
 		7B4B2D7E21E39BC20099DAA3 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		7B4B2D8021E3B2060099DAA3 /* weibo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "weibo-Bridging-Header.h"; sourceTree = "<group>"; };
 		7B4B2D8121E3B2070099DAA3 /* fff.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = fff.m; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 		7B0FE94C21E0F68D00226EB7 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				7B37AE3721E48E1100298CBC /* OAuth */,
 				7B0FE94D21E0F68D00226EB7 /* Home */,
 				7B0FE94E21E0F68D00226EB7 /* Discover */,
 				7B0FE94F21E0F68D00226EB7 /* Message */,
@@ -214,6 +217,14 @@
 				7B12454D21E24F590056C342 /* VisitorView.swift */,
 			);
 			path = Visitor;
+			sourceTree = "<group>";
+		};
+		7B37AE3721E48E1100298CBC /* OAuth */ = {
+			isa = PBXGroup;
+			children = (
+				7B37AE3821E48E6600298CBC /* OAuthViewController.swift */,
+			);
+			path = OAuth;
 			sourceTree = "<group>";
 		};
 		E2BE5D7F12B737B2392CBC20 /* Frameworks */ = {
@@ -356,6 +367,7 @@
 				7B4B2D8821E3BC820099DAA3 /* NetworkTools.swift in Sources */,
 				7B0FE95621E0F7C900226EB7 /* HomeTableViewController.swift in Sources */,
 				7B0FE93521E0EF9400226EB7 /* AppDelegate.swift in Sources */,
+				7B37AE3921E48E6600298CBC /* OAuthViewController.swift in Sources */,
 				7B0FE95A21E0F7FF00226EB7 /* MessageTableViewController.swift in Sources */,
 				7B12454B21E2458B0056C342 /* VisitorTableViewController.swift in Sources */,
 				7B0FE95821E0F7E700226EB7 /* DiscoverTableViewController.swift in Sources */,

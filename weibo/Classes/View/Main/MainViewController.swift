@@ -14,8 +14,12 @@ class MainViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//       NetworkTools.sharedTools.request(method: HMRequestMethod.GET, URLString: "http://httpbin.org/get", parameters: ["name" : "zhangsan" as AnyObject,"age" : 18 as AnyObject]){(result,error)->() in
-//            print("\(result)")}
+        
+    /**   NetworkTools.sharedTools.request(method: HMRequestMethod.GET, URLString: "http://httpbin.org/get", parameters: ["name" : "zhangsan" as AnyObject,"age" : 18 as AnyObject]){(result,error)->() in
+            print("\(result)")
+        
+        } */
+
         addChildViewControllers()
         
     }
