@@ -20,9 +20,10 @@
 		7B12454E21E24F590056C342 /* VisitorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B12454D21E24F590056C342 /* VisitorView.swift */; };
 		7B37AE3921E48E6600298CBC /* OAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B37AE3821E48E6600298CBC /* OAuthViewController.swift */; };
 		7B4B2D7F21E39BC20099DAA3 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 7B4B2D7E21E39BC20099DAA3 /* Podfile */; };
-		7B4B2D8221E3B2070099DAA3 /* fff.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B4B2D8121E3B2070099DAA3 /* fff.m */; };
 		7B4B2D8421E3B27B0099DAA3 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B4B2D8321E3B27B0099DAA3 /* ImageIO.framework */; };
 		7B4B2D8821E3BC820099DAA3 /* NetworkTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4B2D8721E3BC820099DAA3 /* NetworkTools.swift */; };
+		7BA75EE621E73B6C0050E5AF /* UserAccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA75EE521E73B6C0050E5AF /* UserAccountViewModel.swift */; };
+		7BC2010021E5E0E600FBD28D /* UserAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC200FF21E5E0E600FBD28D /* UserAccount.swift */; };
 		CE56130FF1A4C7E7DFC3EBE0 /* Pods_weibo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67D7ADAD49A9E6D3776A25CF /* Pods_weibo.framework */; };
 /* End PBXBuildFile section */
 
@@ -45,9 +46,10 @@
 		7B37AE3821E48E6600298CBC /* OAuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAuthViewController.swift; sourceTree = "<group>"; };
 		7B4B2D7E21E39BC20099DAA3 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		7B4B2D8021E3B2060099DAA3 /* weibo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "weibo-Bridging-Header.h"; sourceTree = "<group>"; };
-		7B4B2D8121E3B2070099DAA3 /* fff.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = fff.m; sourceTree = "<group>"; };
 		7B4B2D8321E3B27B0099DAA3 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		7B4B2D8721E3BC820099DAA3 /* NetworkTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTools.swift; sourceTree = "<group>"; };
+		7BA75EE521E73B6C0050E5AF /* UserAccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAccountViewModel.swift; sourceTree = "<group>"; };
+		7BC200FF21E5E0E600FBD28D /* UserAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAccount.swift; sourceTree = "<group>"; };
 		DEADBAE96FDC1D82346220E6 /* Pods-weibo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-weibo.debug.xcconfig"; path = "Target Support Files/Pods-weibo/Pods-weibo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -76,7 +78,6 @@
 		7B0FE92821E0EF9400226EB7 = {
 			isa = PBXGroup;
 			children = (
-				7B4B2D8121E3B2070099DAA3 /* fff.m */,
 				7B4B2D7E21E39BC20099DAA3 /* Podfile */,
 				7B0FE93321E0EF9400226EB7 /* weibo */,
 				7B0FE93221E0EF9400226EB7 /* Products */,
@@ -121,6 +122,7 @@
 		7B0FE94921E0F68D00226EB7 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				7BA75EE521E73B6C0050E5AF /* UserAccountViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -137,6 +139,7 @@
 		7B0FE94B21E0F68D00226EB7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				7BC200FF21E5E0E600FBD28D /* UserAccount.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -363,15 +366,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7BA75EE621E73B6C0050E5AF /* UserAccountViewModel.swift in Sources */,
 				7B0FE95C21E0F82100226EB7 /* ProfileTableViewController.swift in Sources */,
 				7B4B2D8821E3BC820099DAA3 /* NetworkTools.swift in Sources */,
 				7B0FE95621E0F7C900226EB7 /* HomeTableViewController.swift in Sources */,
 				7B0FE93521E0EF9400226EB7 /* AppDelegate.swift in Sources */,
 				7B37AE3921E48E6600298CBC /* OAuthViewController.swift in Sources */,
+				7BC2010021E5E0E600FBD28D /* UserAccount.swift in Sources */,
 				7B0FE95A21E0F7FF00226EB7 /* MessageTableViewController.swift in Sources */,
 				7B12454B21E2458B0056C342 /* VisitorTableViewController.swift in Sources */,
 				7B0FE95821E0F7E700226EB7 /* DiscoverTableViewController.swift in Sources */,
-				7B4B2D8221E3B2070099DAA3 /* fff.m in Sources */,
 				7B12454E21E24F590056C342 /* VisitorView.swift in Sources */,
 				7B0FE95421E0F78300226EB7 /* MainViewController.swift in Sources */,
 				7B0FE96321E122EB00226EB7 /* UIButton+Extension.swift in Sources */,

@@ -10,7 +10,9 @@ import UIKit
 
 class VisitorTableViewController: UITableViewController {
     //用户登录标记
-    private var userLogon = false
+    private var userLogon = false//UserAccountViewModel.sharedUserAccount.userLogon
+    
+   
     //访客视图
     var visitorView:VisitorView?
     

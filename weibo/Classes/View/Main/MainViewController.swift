@@ -19,9 +19,9 @@ class MainViewController: UITabBarController {
             print("\(result)")
         
         } */
-
+        setupComposedButton()
         addChildViewControllers()
-        
+       
     }
     
     //懒加载控件
@@ -46,7 +46,7 @@ class MainViewController: UITabBarController {
         //将撰写按钮移动到最前面
         tabBar.bringSubviewToFront(composedButton)
         
-        setupComposedButton()
+        
         
     }
     
