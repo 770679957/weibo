@@ -18,11 +18,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.backgroundColor = UIColor.white
-        window?.rootViewController = MainViewController()
+        window?.rootViewController = defaultRootViewController
         window?.makeKeyAndVisible()
+        
+        
+        // 监听通知
+        NotificationCenter.default.addObserver(
+            forName: NSNotification.Name(rawValue: WBSwitchRootViewControllerNotification), // 通知名称，通知中心用来识别通知的
+            object: nil,                           // 发送通知的对象，如果为nil，监听任何对象
+            queue: nil)                           // nil，主线程
+        { [weak self] (notification) -> Void in // weak self，
+            let vc = notification.object != nil ? WelcomeViewController() : MainViewController()
+            
+            // 切换控制器
+            self?.window?.rootViewController = vc
+        }
         
         return true
     }
+    
+    
 
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
@@ -30,8 +45,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationDidEnterBackground(_ application: UIApplication) {
-        // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
-        // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+        
+    }
+    //类在销毁时注销指定的通知
+    deinit {
+        //注销通知
+        NotificationCenter.default.removeObserver(self,//监听者
+        name: NSNotification.Name(rawValue: WBSwitchRootViewControllerNotification),//监听的通知
+        object: nil)//发送通知的对象
     }
 
     func applicationWillEnterForeground(_ application: UIApplication) {
@@ -47,5 +68,42 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
 
+}
+extension AppDelegate {
+    /// 判断是否新版本
+    private var isNewVersion: Bool {
+        // 1. 当前的版本
+        let currentVersion = Bundle.main.infoDictionary!["CFBundleShortVersionString"] as! String
+        let version = Double(currentVersion)!
+         //print("当前版本 \(version)")
+        
+        // 2. `之前`的版本，把当前版本保存在用户偏好 - 如果 key 不存在，返回 0
+        let sandboxVersionKey = "sandboxVersionKey"
+        let sandboxVersion = UserDefaults.standard.double(forKey: sandboxVersionKey)
+        //print("之前版本 \(sandboxVersion)")
+        
+        // 3. 保存当前版本
+        UserDefaults.standard.set(version, forKey:sandboxVersionKey)
+        
+        return version > sandboxVersion
+    }
+    
+    //启动的根视图控制器
+    
+    private var defaultRootViewController:UIViewController {
+        
+        //判断是否登录
+        if UserAccountViewModel.sharedUserAccount.userLogon {
+            return isNewVersion ? NewFeatureViewController() : WelcomeViewController()
+            
+            
+        }
+        
+        return MainViewController()
+        
+    }
+    
+    
+    
 }
 

@@ -32,6 +32,12 @@ class UserAccountViewModel {
         
     }
     
+    //用户头像
+    var avatarUrl:NSURL {
+        
+        return NSURL(string: account?.avatar_large ?? "")!
+    }
+    
     //返回有效的token
     var accessToken:String? {
         //如果token没有过期，返回account 中的token属性

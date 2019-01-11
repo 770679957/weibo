@@ -21,6 +21,13 @@ class OAuthViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //加载页面
+        self.webView.loadRequest(NSURLRequest(url:NetworkTools.sharedTools.OAuthURL as URL) as URLRequest)
+        
+        
+    }
+    
+    override func loadView() {
         view = webView
         //设置代理
         webView.delegate = self
@@ -28,8 +35,6 @@ class OAuthViewController: UIViewController {
         //设置导航栏
         title = "登录新浪微博"
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "关闭", style: .plain, target: self, action: #selector(OAuthViewController.close))
-        //加载页面
-        self.webView.loadRequest(NSURLRequest(url:NetworkTools.sharedTools.OAuthURL as URL) as URLRequest)
         
         //给导航栏添加右上角按钮 和相应方法
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "自动填充", style:.plain, target: self, action: #selector(OAuthViewController.autoFill))
@@ -41,15 +46,6 @@ class OAuthViewController: UIViewController {
         
         webView.stringByEvaluatingJavaScript(from: js)
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    
 }
 
 extension OAuthViewController: UIWebViewDelegate {
@@ -72,33 +68,52 @@ extension OAuthViewController: UIWebViewDelegate {
             return false
         }
         let code=query.substring(from: "code=".endIndex)
-        print("授权码是url:"+(request.url?.absoluteString)!)
-        print("授权码是query:"+query)
-        print("授权码是"+code)
-//        UserAccountViewModel.sharedUserAccount.loadAccessToken(code: code){
-//            (isSuccessed)->() in
-//            if !isSuccessed
-//            {
-//                return
-//            }
-//            print("成功了")
-//            self.dismiss(animated: false){
-//                NotificationCenter.default.post(name: NSNotification.Name(rawValue: WBSwitchRootViewControllerNotification), object: "welcome")
-//            }
-//        }
-        //加载accessToken
-        NetworkTools.sharedTools.loadAccessToken(code: code) {
-            (result, error) ->() in
-            if error != nil {
-                //print("\(error)")
-                print("出错了")
-                return
-            }
 
-            print(result)
+        // 4. 加载 accessToken
+        UserAccountViewModel.sharedUserAccount.loadAccessToken(code: code) { (isSuccessed) -> () in
+            // 如果失败，则直接返回
+            if !isSuccessed {
+               //如果失败 直接返回
+                return
+               
+            }else {
+                
+                print("成功了")
+                //用户登录成功 则退出当前控制器，并发送根视图
+                self.dismiss(animated: false, completion: {
+                    NotificationCenter.default.post (name: NSNotification.Name(rawValue: WBSwitchRootViewControllerNotification), object: "welcome")
+                    
+                })
+            }
         }
-        
        return false
     }
     
+    
+    //加载accessToken时调用该方法
+    private func loadUserInfo(account: UserAccount) {
+        NetworkTools.sharedTools.loadUserInfo(uid: account.uid!) { (result, error) in
+            if error != nil {
+
+                print("加载用户出错了")
+                return
+
+                guard let dict = result as? [String:AnyObject] else {
+
+                    print("格式错误")
+
+                    return
+                }
+
+                print(dict["screen_name"])
+                print(dict["avatar_large"])
+            }
+        }
+    }
+    
+    //加载accessToken
+    
+    
 }
+
+

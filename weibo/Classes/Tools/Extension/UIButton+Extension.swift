@@ -25,5 +25,13 @@ extension UIButton {
         
     }
     
+    convenience init(title:String,color:UIColor,imageName:String) {
+        self.init()
+        setTitle(title, for: .normal)
+        setTitleColor(color, for: .normal)
+        setBackgroundImage(UIImage(named: imageName), for: .normal)
+        
+    }
+    
     
 }

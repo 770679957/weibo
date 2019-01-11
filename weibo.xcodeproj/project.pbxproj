@@ -19,10 +19,16 @@
 		7B12454B21E2458B0056C342 /* VisitorTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B12454A21E2458B0056C342 /* VisitorTableViewController.swift */; };
 		7B12454E21E24F590056C342 /* VisitorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B12454D21E24F590056C342 /* VisitorView.swift */; };
 		7B37AE3921E48E6600298CBC /* OAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B37AE3821E48E6600298CBC /* OAuthViewController.swift */; };
+		7B39B56221E8974E0035E408 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B39B56121E8974E0035E408 /* WelcomeViewController.swift */; };
+		7B39B56621E89CCC0035E408 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B39B56521E89CCC0035E408 /* UIImageView+Extension.swift */; };
+		7B39B56821E8A2F80035E408 /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B39B56721E8A2F80035E408 /* UILabel+Extension.swift */; };
+		7B39B56E21E91DA90035E408 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B39B56D21E91DA90035E408 /* Common.swift */; };
 		7B4B2D7F21E39BC20099DAA3 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 7B4B2D7E21E39BC20099DAA3 /* Podfile */; };
 		7B4B2D8421E3B27B0099DAA3 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B4B2D8321E3B27B0099DAA3 /* ImageIO.framework */; };
 		7B4B2D8821E3BC820099DAA3 /* NetworkTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4B2D8721E3BC820099DAA3 /* NetworkTools.swift */; };
 		7BA75EE621E73B6C0050E5AF /* UserAccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA75EE521E73B6C0050E5AF /* UserAccountViewModel.swift */; };
+		7BA75EE921E794AE0050E5AF /* NewFeatureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA75EE821E794AE0050E5AF /* NewFeatureViewController.swift */; };
+		7BA75EEB21E7A87C0050E5AF /* NewFeatureCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA75EEA21E7A87C0050E5AF /* NewFeatureCell.swift */; };
 		7BC2010021E5E0E600FBD28D /* UserAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC200FF21E5E0E600FBD28D /* UserAccount.swift */; };
 		CE56130FF1A4C7E7DFC3EBE0 /* Pods_weibo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67D7ADAD49A9E6D3776A25CF /* Pods_weibo.framework */; };
 /* End PBXBuildFile section */
@@ -44,11 +50,17 @@
 		7B12454A21E2458B0056C342 /* VisitorTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisitorTableViewController.swift; sourceTree = "<group>"; };
 		7B12454D21E24F590056C342 /* VisitorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisitorView.swift; sourceTree = "<group>"; };
 		7B37AE3821E48E6600298CBC /* OAuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAuthViewController.swift; sourceTree = "<group>"; };
+		7B39B56121E8974E0035E408 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		7B39B56521E89CCC0035E408 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
+		7B39B56721E8A2F80035E408 /* UILabel+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
+		7B39B56D21E91DA90035E408 /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		7B4B2D7E21E39BC20099DAA3 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		7B4B2D8021E3B2060099DAA3 /* weibo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "weibo-Bridging-Header.h"; sourceTree = "<group>"; };
 		7B4B2D8321E3B27B0099DAA3 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		7B4B2D8721E3BC820099DAA3 /* NetworkTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTools.swift; sourceTree = "<group>"; };
 		7BA75EE521E73B6C0050E5AF /* UserAccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAccountViewModel.swift; sourceTree = "<group>"; };
+		7BA75EE821E794AE0050E5AF /* NewFeatureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewFeatureViewController.swift; sourceTree = "<group>"; };
+		7BA75EEA21E7A87C0050E5AF /* NewFeatureCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewFeatureCell.swift; sourceTree = "<group>"; };
 		7BC200FF21E5E0E600FBD28D /* UserAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAccount.swift; sourceTree = "<group>"; };
 		DEADBAE96FDC1D82346220E6 /* Pods-weibo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-weibo.debug.xcconfig"; path = "Target Support Files/Pods-weibo/Pods-weibo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -131,6 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				7B4B2D8721E3BC820099DAA3 /* NetworkTools.swift */,
+				7B39B56D21E91DA90035E408 /* Common.swift */,
 				7B0FE95D21E11F3100226EB7 /* Extension */,
 			);
 			path = Tools;
@@ -192,6 +205,7 @@
 		7B0FE95121E0F68D00226EB7 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				7BA75EE721E794270050E5AF /* NewFeature */,
 				7B12454921E2451D0056C342 /* Visitor */,
 				7B0FE95321E0F78300226EB7 /* MainViewController.swift */,
 			);
@@ -209,6 +223,8 @@
 			isa = PBXGroup;
 			children = (
 				7B0FE96221E122EB00226EB7 /* UIButton+Extension.swift */,
+				7B39B56521E89CCC0035E408 /* UIImageView+Extension.swift */,
+				7B39B56721E8A2F80035E408 /* UILabel+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -228,6 +244,16 @@
 				7B37AE3821E48E6600298CBC /* OAuthViewController.swift */,
 			);
 			path = OAuth;
+			sourceTree = "<group>";
+		};
+		7BA75EE721E794270050E5AF /* NewFeature */ = {
+			isa = PBXGroup;
+			children = (
+				7BA75EE821E794AE0050E5AF /* NewFeatureViewController.swift */,
+				7BA75EEA21E7A87C0050E5AF /* NewFeatureCell.swift */,
+				7B39B56121E8974E0035E408 /* WelcomeViewController.swift */,
+			);
+			path = NewFeature;
 			sourceTree = "<group>";
 		};
 		E2BE5D7F12B737B2392CBC20 /* Frameworks */ = {
@@ -367,17 +393,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				7BA75EE621E73B6C0050E5AF /* UserAccountViewModel.swift in Sources */,
+				7B39B56221E8974E0035E408 /* WelcomeViewController.swift in Sources */,
+				7BA75EEB21E7A87C0050E5AF /* NewFeatureCell.swift in Sources */,
 				7B0FE95C21E0F82100226EB7 /* ProfileTableViewController.swift in Sources */,
 				7B4B2D8821E3BC820099DAA3 /* NetworkTools.swift in Sources */,
 				7B0FE95621E0F7C900226EB7 /* HomeTableViewController.swift in Sources */,
 				7B0FE93521E0EF9400226EB7 /* AppDelegate.swift in Sources */,
 				7B37AE3921E48E6600298CBC /* OAuthViewController.swift in Sources */,
+				7B39B56821E8A2F80035E408 /* UILabel+Extension.swift in Sources */,
+				7BA75EE921E794AE0050E5AF /* NewFeatureViewController.swift in Sources */,
 				7BC2010021E5E0E600FBD28D /* UserAccount.swift in Sources */,
 				7B0FE95A21E0F7FF00226EB7 /* MessageTableViewController.swift in Sources */,
 				7B12454B21E2458B0056C342 /* VisitorTableViewController.swift in Sources */,
 				7B0FE95821E0F7E700226EB7 /* DiscoverTableViewController.swift in Sources */,
 				7B12454E21E24F590056C342 /* VisitorView.swift in Sources */,
+				7B39B56E21E91DA90035E408 /* Common.swift in Sources */,
 				7B0FE95421E0F78300226EB7 /* MainViewController.swift in Sources */,
+				7B39B56621E89CCC0035E408 /* UIImageView+Extension.swift in Sources */,
 				7B0FE96321E122EB00226EB7 /* UIButton+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
