@@ -45,25 +45,27 @@ class VisitorView: UIView {
         return label
     }()
     
-    //注册按钮
-    public lazy var registerButton: UIButton = {
-        let button = UIButton()
-        button.setTitle("注册", for: .normal)
-        button.setTitleColor(UIColor.orange, for: .normal)
-        button.setBackgroundImage(UIImage(named: "common_button_white_disable"), for: .normal)
-
-        return button
-    }()
-    //登录按钮
-    public lazy var loginButton:UIButton = {
-        let button = UIButton()
-        button.setTitle("登录", for: .normal)
-        button.setTitleColor(UIColor.orange, for: .normal)
-        button.setBackgroundImage(UIImage(named: "common_button_white_disable"), for: .normal)
-       
-        return button
-    }()
-    
+//    //注册按钮
+//    public lazy var registerButton: UIButton = {
+//        let button = UIButton()
+//        button.setTitle("注册", for: .normal)
+//        button.setTitleColor(UIColor.orange, for: .normal)
+//        button.setBackgroundImage(UIImage(named: "common_button_white_disable"), for: .normal)
+//
+//        return button
+//    }()
+//    //登录按钮
+//    public lazy var loginButton:UIButton = {
+//        let button = UIButton()
+//        button.setTitle("登录", for: .normal)
+//        button.setTitleColor(UIColor.orange, for: .normal)
+//        button.setBackgroundImage(UIImage(named: "common_button_white_disable"), for: .normal)
+//
+//        return button
+//    }()
+  
+    public lazy var registerButton:UIButton=UIButton(title:"注册",color:UIColor.orange,backImageName:"common_button_white_disable")
+    public lazy var loginButton:UIButton=UIButton(title:"登陆",color:UIColor.orange,backImageName:"common_button_white_disable")
     //开启首页转轮动画
     private func startAnim() {
         
@@ -90,54 +92,25 @@ extension VisitorView{
         addSubview(registerButton)
         addSubview(loginButton)
         
-        
-//        for v in subviews {
-//            v.translatesAutoresizingMaskIntoConstraints=false
-//        }
-//
-//        addConstraint(NSLayoutConstraint(item: iconView, attribute: .centerX, relatedBy: .equal, toItem: self, attribute: .centerX, multiplier: 1.0, constant: 0))
-//        addConstraint(NSLayoutConstraint(item: iconView, attribute: .centerY, relatedBy: .equal, toItem: self, attribute: .centerY, multiplier: 1.0, constant: -60))
-//
-//        addConstraint(NSLayoutConstraint(item: homeIconView, attribute: .centerX, relatedBy: .equal, toItem: iconView, attribute: .centerX, multiplier: 1.0, constant: 0))
-//        addConstraint(NSLayoutConstraint(item: homeIconView, attribute: .centerY, relatedBy: .equal, toItem: iconView, attribute: .centerY, multiplier: 1.0, constant: 0))
-//
-//        addConstraint(NSLayoutConstraint(item: messageLabel, attribute: .centerX, relatedBy: .equal, toItem: iconView, attribute: .centerX, multiplier: 1.0, constant: 0))
-//        addConstraint(NSLayoutConstraint(item: messageLabel, attribute: .centerY, relatedBy: .equal, toItem: iconView, attribute: .bottom, multiplier: 1.0, constant: 16))
-//        addConstraint(NSLayoutConstraint(item: messageLabel, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: 224))
-//        addConstraint(NSLayoutConstraint(item: messageLabel, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: 36))
-//
-//        addConstraint(NSLayoutConstraint(item: registerButton, attribute: .left, relatedBy: .equal, toItem: messageLabel, attribute: .left, multiplier: 1.0, constant: 0))
-//        addConstraint(NSLayoutConstraint(item: registerButton, attribute: .top, relatedBy: .equal, toItem: messageLabel, attribute: .bottom, multiplier: 1.0, constant: 16))
-//        addConstraint(NSLayoutConstraint(item: registerButton, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: 100))
-//        addConstraint(NSLayoutConstraint(item: registerButton, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: 36))
-//
-//        addConstraint(NSLayoutConstraint(item: loginButton, attribute: .right, relatedBy: .equal, toItem: messageLabel, attribute: .right, multiplier: 1.0, constant: 0))
-//        addConstraint(NSLayoutConstraint(item: loginButton, attribute: .top, relatedBy: .equal, toItem: messageLabel, attribute: .bottom, multiplier: 1.0, constant: 16))
-//        addConstraint(NSLayoutConstraint(item: loginButton, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: 100))
-//        addConstraint(NSLayoutConstraint(item: loginButton, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: 36))
-        
-//        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-0-[mask]-0-|", options: [], metrics: nil, views: ["mask":maskIconView]))
-//        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-0-[mask]-(btnHeight)-[regButton]", options: [], metrics: ["btnHeight":-300], views: ["mask":maskIconView,"regButton":registerButton]))
-        
         //设置自动布局
         //图标
-        iconView.snp_makeConstraints { (make) in
+        iconView.snp_makeConstraints { (make) ->Void in
             make.centerX.equalTo(self.snp_centerX)
             make.centerY.equalTo(self.snp_centerY).offset(-60)
         }
         //房子
-        homeIconView.snp_remakeConstraints { (make) in
+        homeIconView.snp_remakeConstraints { (make) ->Void in
             make.center.equalTo(iconView.snp_center)
         }
         //消息文字
-        messageLabel.snp_makeConstraints { (make) in
+        messageLabel.snp_makeConstraints { (make) ->Void in
             make.centerX.equalTo(iconView.snp_centerX)
             make.top.equalTo(iconView.snp_bottom).offset(16)
             make.width.equalTo(224)
             make.height.equalTo(36)
         }
         //注册按钮
-        registerButton.snp_makeConstraints { (make) in
+        registerButton.snp_makeConstraints { (make) ->Void in
             make.left.equalTo(messageLabel.snp_left)
             make.top.equalTo(messageLabel.snp_bottom).offset(16)
             make.width.equalTo(100)
@@ -145,7 +118,7 @@ extension VisitorView{
         }
         
         //登录按钮
-        loginButton.snp_makeConstraints { (make) in
+        loginButton.snp_makeConstraints { (make) ->Void in
             make.right.equalTo(messageLabel.snp_right)
             make.top.equalTo(registerButton.snp_top)
             make.width.equalTo(registerButton.snp_width)

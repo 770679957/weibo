@@ -79,19 +79,6 @@ extension NetworkTools {
         
         request(method: .POST, URLString: urlString, parameters: params as [String : AnyObject], finished: finished)
         
-        
-//        // 测试返回的数据内容
-//        // 1> 设置相应数据格式是二进制的
-//        responseSerializer = AFHTTPResponseSerializer()
-//
-//        // 2> 发起网络请求
-//        post(urlString, parameters: params, success: { (_, result) -> Void in
-//            // 将二进制数据转换成字符串
-//            let json = NSString(data: result as! Data, encoding:String.Encoding.utf8.rawValue)
-//                    print(json)
-//        }, failure: nil)
-//// Optional({"access_token":"2.00ziILYHPKMIdCea5a9f4f5es6tiGC","remind_in":"157679999","expires_in":157679999,"uid":"6917980397","isRealName":"true"})
-        
  
     }
     
@@ -128,6 +115,27 @@ extension NetworkTools {
         params["uid"] = uid as AnyObject
         request(method: .GET, URLString: urlString, parameters: params as [String : AnyObject], finished: finished)
     }
+}
+
+//微博数据加载方法
+extension NetworkTools {
+    //加载微博数据
+    func loadStatus(finished: @escaping HMRequestCallBack) {
+ 
+        //获取 token 字典
+        guard let params = tokenDict else {
+            //如果字典为空，通知调用方，token无效
+            finished(nil,NSError(domain: "com.yyw.test.weibo", code: -1001, userInfo: ["message":"token 为空"]))
+            return
+        }
+        //准备网络参数
+       // let urlString = "https://api.weibo.com/2/statuses/home_timeline.json"
+        let urlString = "https://api.weibo.com/2/statuses/home_timeline.json"
+        
+        //发起网络请求
+        request(method: .GET, URLString: urlString, parameters: params, finished: finished)
+    }
+    
 }
 
 

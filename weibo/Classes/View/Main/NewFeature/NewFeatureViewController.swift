@@ -12,10 +12,11 @@ import SnapKit
 
 private let reuseIdentifier = "Cell"
 
+//可用单元格
+private let WBNewFeatureViewCellId = "WBNewFeatureViewCellId"
+
 class NewFeatureViewController: UICollectionViewController {
-    
-    //可用单元格
-    private let WBNewFeatureViewCellId = "WBNewFeatureViewCellId"
+   
     //新特性图像的数量
     private let WBNewFeatureImageCount = 4
     
@@ -57,10 +58,6 @@ class NewFeatureViewController: UICollectionViewController {
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath/*单元格在集合视图中的位置*/) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: WBNewFeatureViewCellId, for: indexPath) as! NewFeatureCell
-        
-        
-        // Configure the cell
-        //cell.backgroundColor=indexPath.item % 2 == 0 ? UIColor.red:UIColor.green
         cell.imageIndex=indexPath.item
         return cell
     }

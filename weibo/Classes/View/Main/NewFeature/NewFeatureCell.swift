@@ -29,7 +29,7 @@ class NewFeatureCell: UICollectionViewCell {
         addSubview(startButton)
         
         //约束
-        startButton.snp_makeConstraints { (make) in
+        startButton.snp_makeConstraints { (make) ->Void in
             make.centerX.equalTo(self.snp_centerX)
             make.bottom.equalTo(self.snp_bottom).multipliedBy(0.7)
         }
@@ -59,7 +59,7 @@ class NewFeatureCell: UICollectionViewCell {
     }
     
     /// 开始体验按钮
-    public lazy var startButton: UIButton = UIButton(title: "开始体验", color:UIColor.white, imageName: "new_feature_finish_button")
+    public lazy var startButton: UIButton = UIButton(title: "开始体验", color:UIColor.white, backImageName: "new_feature_finish_button")
     
     //显示按钮动画
     

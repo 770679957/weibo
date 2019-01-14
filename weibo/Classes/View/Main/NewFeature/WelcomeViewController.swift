@@ -50,7 +50,7 @@ class WelcomeViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        iconView.snp_updateConstraints { (make) in
+        iconView.snp_updateConstraints { (make) ->Void in
             make.bottom.equalTo(view.snp_bottom).offset(-view.bounds.height + 200)
             
         }
@@ -89,14 +89,14 @@ extension WelcomeViewController {
         view.addSubview(welcomeLabel)
         
         //2.自动布局
-        iconView.snp_makeConstraints { (make) in
+        iconView.snp_makeConstraints { (make) ->Void in
             make.centerX.equalTo(view.snp_centerX)
             make.bottom.equalTo(view.snp_bottom).offset(-200)
             make.width.equalTo(90)
             make.height.equalTo(90)
         }
         
-        welcomeLabel.snp_makeConstraints { (make) in
+        welcomeLabel.snp_makeConstraints { (make) ->Void in
             make.centerX.equalTo(iconView.snp_centerX)
             make.top.equalTo(iconView.snp_bottom).offset(16)
         }

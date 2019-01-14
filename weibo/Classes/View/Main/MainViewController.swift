@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import AFNetworking
 
 class MainViewController: UITabBarController {
 
@@ -26,6 +25,8 @@ class MainViewController: UITabBarController {
     
     //懒加载控件
     private lazy var composedButton: UIButton = UIButton(imageName: "tabbar_compose_icon_add", backImageName: "babbat_compose_button")
+    
+    
     //设置撰写按钮
     private func setupComposedButton() {
         //添加按钮
@@ -40,6 +41,8 @@ class MainViewController: UITabBarController {
         composedButton.addTarget(self, action: #selector(clickComposedButton), for: .touchUpInside)
         
     }
+    
+    
     override func viewWillAppear(_ animated: Bool) {
         //创建tabbar中的所有控制器对应的按钮
         super.viewWillAppear(animated)

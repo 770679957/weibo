@@ -17,7 +17,7 @@ extension UILabel {
     ///
     /// - returns: UILabel
     /// 参数后面的值是参数的默认值，如果不传递，就使用默认值
-    convenience init(title: String, fontSize: CGFloat = 14, color: UIColor = UIColor.darkGray) {
+    convenience init(title: String, fontSize: CGFloat = 14, color: UIColor = UIColor.darkGray,screenInset: CGFloat = 0) {
         
         self.init()
         
@@ -26,17 +26,16 @@ extension UILabel {
         font = UIFont.systemFont(ofSize: fontSize)
         
         numberOfLines = 0
-        textAlignment = NSTextAlignment.center
-//
-//        if screenInset == 0 {
-//            textAlignment = .center
-//        } else {
-//            // 设置换行宽度
-//            preferredMaxLayoutWidth = UIScreen.main.bounds.width - 2 * screenInset
-//            textAlignment = .left
-//        }
-//
-       // sizeToFit()
+        if screenInset == 0 {
+            textAlignment = .center
+            
+        }else {
+            //设置换行高度
+            preferredMaxLayoutWidth = UIScreen.main.bounds.width - 2 * screenInset
+            textAlignment = .left
+            
+        }
+
     }
     
 }

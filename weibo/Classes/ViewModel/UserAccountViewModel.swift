@@ -5,7 +5,7 @@
 //  Created by yangyingwei on 2019/1/10.
 //  Copyright © 2019 yangyingwei. All rights reserved.
 //
-
+import Foundation
 
 class UserAccountViewModel {
     //用户模型
@@ -51,7 +51,7 @@ class UserAccountViewModel {
     private init() {
         // 从沙盒解档数据，恢复当前数据
         account = NSKeyedUnarchiver.unarchiveObject(withFile: accountPath) as? UserAccount
-        print(account)
+        //print(account)
         
         // 判断token是否过期
         if isExpired {
@@ -87,7 +87,7 @@ extension UserAccountViewModel {
             }
             
             self.account=UserAccount(dict: result as! [String:Any] as [String : AnyObject])
-            //print(account.description)
+           // print(self.account)
             self.loadUserInfo(account: self.account!,finished:finished)
         }
     }

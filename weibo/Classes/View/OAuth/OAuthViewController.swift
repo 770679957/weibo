@@ -42,7 +42,7 @@ class OAuthViewController: UIViewController {
     
     @objc private func autoFill() {
         
-        let js = "document.getElementById('userId').value = '350666080@qq.com';" + "document.getElementById('passwd').value = '';"
+        let js = "document.getElementById('userId').value = '350666080@qq.com';" + "document.getElementById('passwd').value = '00002121lhm';"
         
         webView.stringByEvaluatingJavaScript(from: js)
     }
@@ -105,8 +105,8 @@ extension OAuthViewController: UIWebViewDelegate {
                     return
                 }
 
-                print(dict["screen_name"])
-                print(dict["avatar_large"])
+               // print(dict["screen_name"])
+               // print(dict["avatar_large"])
             }
         }
     }
