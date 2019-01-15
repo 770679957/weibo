@@ -38,6 +38,12 @@ class NetworkTools: AFHTTPSessionManager {
 
 }
 
+/// 网络请求
+///
+/// - parameter method:     GET / POST
+/// - parameter URLString:  URLString
+/// - parameter parameters: 参数字典
+/// - parameter finished:   完成回调
 extension NetworkTools {
     func request(method:HMRequestMethod,URLString:String,parameters:[String:AnyObject]?,finished:@escaping HMRequestCallBack)
     {
@@ -119,23 +125,34 @@ extension NetworkTools {
 
 //微博数据加载方法
 extension NetworkTools {
-    //加载微博数据
-    func loadStatus(finished: @escaping HMRequestCallBack) {
- 
-        //获取 token 字典
-        guard let params = tokenDict else {
-            //如果字典为空，通知调用方，token无效
-            finished(nil,NSError(domain: "com.yyw.test.weibo", code: -1001, userInfo: ["message":"token 为空"]))
+    /// 加载微博数据
+    ///
+    /// - parameter since_id: 若指定此参数，则返回ID比since_id大的微博，默认为0。
+    /// - parameter max_id: 若指定此参数，则返回ID小于或等于`max_id`的微博，默认为0
+    /// - parameter finished: 完成回调
+    func loadStatus(since_id:Int,max_id:Int,finished:@escaping HMRequestCallBack) {
+        // 1. 创建参数字典
+        var params = [String:AnyObject]()
+        
+        // 判断是否下拉
+        guard let p = tokenDict else
+        {
+            finished(nil,NSError(domain:"cn.itcast.error",code:-1001,userInfo:["message":"token is nil"]))
             return
         }
-        //准备网络参数
-       // let urlString = "https://api.weibo.com/2/statuses/home_timeline.json"
-        let urlString = "https://api.weibo.com/2/statuses/home_timeline.json"
         
-        //发起网络请求
+        params["access_token"] = p["access_token"]
+        
+        if since_id > 0 {
+            params["since_id"] = since_id as AnyObject?
+        }else if max_id > 0 {
+            params["max_id"] = max_id - 1 as AnyObject?
+        }
+         // 2. 准备网络参数
+        let urlString="https://api.weibo.com/2/statuses/home_timeline.json"
+        // 3. 发起网络请求
         request(method: .GET, URLString: urlString, parameters: params, finished: finished)
     }
-    
 }
 
 

@@ -51,24 +51,42 @@ class StatusViewModel: CustomStringConvertible {
     /// 行高
     lazy var rowHeight:CGFloat = {
        // print("计算缓存行高\(self.status.text)")
-        let cell = StatusCell(style: .default, reuseIdentifier: StatusCellNormalId)
-        //var cell:StatusCell
-        //        if self.status.retweeted_status != nil{
-        //            cell = StatusRetweetedCell(style:.default,reuseIdentifier:StatusCellRetweetedId)
-        //        }else{
-        //            cell = StatusNormalCell(style:.default,reuseIdentifier:StatusCellNormalId)
-        //        }
+        //let cell = StatusRetweetedCell(style:.default,reuseIdentifier:StatusCellRetweetedId)
+        var cell:StatusCell
+        //实例化cell
+                if self.status.retweeted_status != nil{
+                    cell = StatusRetweetedCell(style:.default,reuseIdentifier:StatusCellRetweetedId)
+                }else{
+                    cell = StatusNormalCell(style:.default,reuseIdentifier:StatusCellNormalId)
+                }
         
         return cell.rowHeight(vm: self)
     }()
+    
+    /// 被转发原创微博的文字
+    var retweetedText: String? {
+        guard let s = status.retweeted_status else {
+            return nil
+        }
+         return "@" + (s.user?.screen_name ?? "") + ":" + (s.text ?? "")!
+    }
+    
+    /// 可重用标识符
+    var cellId: String {
+        return status.retweeted_status != nil ? StatusCellRetweetedId: StatusCellNormalId
+    }
+    
     
     //构造器
     init(status:Status) {
         self.status = status
         //根据模型，来生成缩略图数组
-        if (status.pic_urls?.count)! > 0 {
+         if let urls = status.retweeted_status?.pic_urls ?? status.pic_urls  {
+            // 创建缩略图数组
             thumbnailUrls = [NSURL]()
-            for dict in status.pic_urls! {
+            
+            // 遍历字典数组 - 数组如果是可选的，不允许遍历，原因：数组是通过下标来检索数据
+            for dict in urls {
                 let url = NSURL(string:dict["thumbnail_pic"]!)
                 thumbnailUrls?.append(url!)
             }

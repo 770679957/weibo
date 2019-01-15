@@ -17,13 +17,13 @@ let StatusCellIconWidth: CGFloat = 35
 class StatusCell: UITableViewCell {
  
     //顶部视图
-    private lazy var topView: StatusCellTopView = StatusCellTopView()
+    lazy var topView: StatusCellTopView = StatusCellTopView()
     //正文标签
-    private lazy var contentLabel:UILabel = UILabel(title: "微博正文", fontSize: 15, color: UIColor.darkGray,screenInset:StatusCellMargin)
+    lazy var contentLabel:UILabel = UILabel(title: "微博正文", fontSize: 15, color: UIColor.darkGray,screenInset:StatusCellMargin)
     // 配图视图
-    private lazy var pictureView: StatusPictureView = StatusPictureView()
+    lazy var pictureView: StatusPictureView = StatusPictureView()
     //底部视图
-    private lazy var bottomView:StatusCellBottomView = StatusCellBottomView()
+    lazy var bottomView:StatusCellBottomView = StatusCellBottomView()
     
     // MARK: - 构造函数
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -82,7 +82,7 @@ class StatusCell: UITableViewCell {
 
 extension StatusCell {
     //p186
-    private func setupUI() {
+   @objc func setupUI() {
         //添加控件
         contentView.addSubview(topView)
         contentView.addSubview(contentLabel)
@@ -104,13 +104,13 @@ extension StatusCell {
         }
         
         //配图视图
-         pictureView.snp.makeConstraints{ (make)->Void in
-             make.top.equalTo(contentLabel.snp.bottom).offset(StatusCellMargin)
-             make.left.equalTo(contentView.snp.left)
-             make.width.equalTo(300)
-             make.height.equalTo(90)
-         
-         }
+//         pictureView.snp.makeConstraints{ (make)->Void in
+//             make.top.equalTo(contentLabel.snp.bottom).offset(StatusCellMargin)
+//             make.left.equalTo(contentView.snp.left)
+//             make.width.equalTo(300)
+//             make.height.equalTo(90)
+//
+//         }
  
         //底部试图
         bottomView.snp.makeConstraints{ (make)->Void in

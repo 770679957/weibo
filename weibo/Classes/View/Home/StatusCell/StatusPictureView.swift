@@ -91,7 +91,6 @@ extension StatusPictureView {
             
             // 提取单图
             if let key = viewModel?.thumbnailUrls?.first?.absoluteString {
-                // let image = SDWebImageManager.shared().imageCache?.imageFromDiskCache(forKey: key)
                 
                 if let image = SDWebImageManager.shared().imageCache!.imageFromDiskCache(forKey: key) {
                     size = image.size

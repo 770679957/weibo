@@ -30,6 +30,10 @@
 		7B39B56621E89CCC0035E408 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B39B56521E89CCC0035E408 /* UIImageView+Extension.swift */; };
 		7B39B56821E8A2F80035E408 /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B39B56721E8A2F80035E408 /* UILabel+Extension.swift */; };
 		7B39B56E21E91DA90035E408 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B39B56D21E91DA90035E408 /* Common.swift */; };
+		7B3B5BC521ECCCC3004B3277 /* StatusRetweetedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3B5BC421ECCCC3004B3277 /* StatusRetweetedCell.swift */; };
+		7B3B5BC721ECE12D004B3277 /* StatusNormalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3B5BC621ECE12D004B3277 /* StatusNormalCell.swift */; };
+		7B3B5BCA21ECF64E004B3277 /* WBRefreshControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3B5BC921ECF64E004B3277 /* WBRefreshControl.swift */; };
+		7B3B5BCC21ECF9C1004B3277 /* WBRefreshView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B3B5BCB21ECF9C1004B3277 /* WBRefreshView.xib */; };
 		7B4B2D7F21E39BC20099DAA3 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 7B4B2D7E21E39BC20099DAA3 /* Podfile */; };
 		7B4B2D8421E3B27B0099DAA3 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B4B2D8321E3B27B0099DAA3 /* ImageIO.framework */; };
 		7B4B2D8821E3BC820099DAA3 /* NetworkTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4B2D8721E3BC820099DAA3 /* NetworkTools.swift */; };
@@ -69,6 +73,10 @@
 		7B39B56521E89CCC0035E408 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 		7B39B56721E8A2F80035E408 /* UILabel+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
 		7B39B56D21E91DA90035E408 /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
+		7B3B5BC421ECCCC3004B3277 /* StatusRetweetedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusRetweetedCell.swift; sourceTree = "<group>"; };
+		7B3B5BC621ECE12D004B3277 /* StatusNormalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusNormalCell.swift; sourceTree = "<group>"; };
+		7B3B5BC921ECF64E004B3277 /* WBRefreshControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WBRefreshControl.swift; sourceTree = "<group>"; };
+		7B3B5BCB21ECF9C1004B3277 /* WBRefreshView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WBRefreshView.xib; sourceTree = "<group>"; };
 		7B4B2D7E21E39BC20099DAA3 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		7B4B2D8021E3B2060099DAA3 /* weibo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "weibo-Bridging-Header.h"; sourceTree = "<group>"; };
 		7B4B2D8321E3B27B0099DAA3 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
@@ -193,6 +201,7 @@
 		7B0FE94D21E0F68D00226EB7 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				7B3B5BC821ECF61F004B3277 /* RefreshView */,
 				7B17B95221EA2FB700C75F08 /* StatusCell */,
 				7B0FE95521E0F7C900226EB7 /* HomeTableViewController.swift */,
 			);
@@ -266,6 +275,8 @@
 				7B17B95D21EA420E00C75F08 /* StatusCellTopView.swift */,
 				7BD0CC9021EB73CA00ADD44B /* StatusPictureView.swift */,
 				7B17B95F21EA425B00C75F08 /* StatusCellBottomView.swift */,
+				7B3B5BC421ECCCC3004B3277 /* StatusRetweetedCell.swift */,
+				7B3B5BC621ECE12D004B3277 /* StatusNormalCell.swift */,
 			);
 			path = StatusCell;
 			sourceTree = "<group>";
@@ -276,6 +287,15 @@
 				7B37AE3821E48E6600298CBC /* OAuthViewController.swift */,
 			);
 			path = OAuth;
+			sourceTree = "<group>";
+		};
+		7B3B5BC821ECF61F004B3277 /* RefreshView */ = {
+			isa = PBXGroup;
+			children = (
+				7B3B5BCB21ECF9C1004B3277 /* WBRefreshView.xib */,
+				7B3B5BC921ECF64E004B3277 /* WBRefreshControl.swift */,
+			);
+			path = RefreshView;
 			sourceTree = "<group>";
 		};
 		7BA75EE721E794270050E5AF /* NewFeature */ = {
@@ -359,6 +379,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B4B2D7F21E39BC20099DAA3 /* Podfile in Resources */,
+				7B3B5BCC21ECF9C1004B3277 /* WBRefreshView.xib in Resources */,
 				7B0FE93C21E0EF9600226EB7 /* Assets.xcassets in Resources */,
 				7B0FE93A21E0EF9400226EB7 /* Main.storyboard in Resources */,
 			);
@@ -428,7 +449,9 @@
 				7B39B56221E8974E0035E408 /* WelcomeViewController.swift in Sources */,
 				7B17B95E21EA420E00C75F08 /* StatusCellTopView.swift in Sources */,
 				7BA75EEB21E7A87C0050E5AF /* NewFeatureCell.swift in Sources */,
+				7B3B5BCA21ECF64E004B3277 /* WBRefreshControl.swift in Sources */,
 				7B0FE95C21E0F82100226EB7 /* ProfileTableViewController.swift in Sources */,
+				7B3B5BC521ECCCC3004B3277 /* StatusRetweetedCell.swift in Sources */,
 				7BD0CC9121EB73CA00ADD44B /* StatusPictureView.swift in Sources */,
 				7B4B2D8821E3BC820099DAA3 /* NetworkTools.swift in Sources */,
 				7B0FE95621E0F7C900226EB7 /* HomeTableViewController.swift in Sources */,
@@ -437,6 +460,7 @@
 				7B37AE3921E48E6600298CBC /* OAuthViewController.swift in Sources */,
 				7B39B56821E8A2F80035E408 /* UILabel+Extension.swift in Sources */,
 				7BA75EE921E794AE0050E5AF /* NewFeatureViewController.swift in Sources */,
+				7B3B5BC721ECE12D004B3277 /* StatusNormalCell.swift in Sources */,
 				7B17B95121EA2B6C00C75F08 /* User.swift in Sources */,
 				7BC2010021E5E0E600FBD28D /* UserAccount.swift in Sources */,
 				7B323D7521E9C58A0091987F /* Status.swift in Sources */,
