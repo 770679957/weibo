@@ -18,6 +18,8 @@
 		7B0FE96321E122EB00226EB7 /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0FE96221E122EB00226EB7 /* UIButton+Extension.swift */; };
 		7B12454B21E2458B0056C342 /* VisitorTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B12454A21E2458B0056C342 /* VisitorTableViewController.swift */; };
 		7B12454E21E24F590056C342 /* VisitorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B12454D21E24F590056C342 /* VisitorView.swift */; };
+		7B133AC221F382EC005A3E29 /* ComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B133AC121F382EC005A3E29 /* ComposeViewController.swift */; };
+		7B133AC421F3A9BE005A3E29 /* UIBarButtonItem+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B133AC321F3A9BE005A3E29 /* UIBarButtonItem+Extension.swift */; };
 		7B17B94F21EA087600C75F08 /* StatusListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B17B94E21EA087600C75F08 /* StatusListViewModel.swift */; };
 		7B17B95121EA2B6C00C75F08 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B17B95021EA2B6C00C75F08 /* User.swift */; };
 		7B17B95C21EA410800C75F08 /* StatusCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B17B95B21EA410800C75F08 /* StatusCell.swift */; };
@@ -61,6 +63,8 @@
 		7B0FE96221E122EB00226EB7 /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
 		7B12454A21E2458B0056C342 /* VisitorTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisitorTableViewController.swift; sourceTree = "<group>"; };
 		7B12454D21E24F590056C342 /* VisitorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisitorView.swift; sourceTree = "<group>"; };
+		7B133AC121F382EC005A3E29 /* ComposeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposeViewController.swift; sourceTree = "<group>"; };
+		7B133AC321F3A9BE005A3E29 /* UIBarButtonItem+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Extension.swift"; sourceTree = "<group>"; };
 		7B17B94E21EA087600C75F08 /* StatusListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusListViewModel.swift; sourceTree = "<group>"; };
 		7B17B95021EA2B6C00C75F08 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		7B17B95B21EA410800C75F08 /* StatusCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusCell.swift; sourceTree = "<group>"; };
@@ -188,6 +192,7 @@
 		7B0FE94C21E0F68D00226EB7 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				7B133AC021F382CE005A3E29 /* Compose */,
 				7B37AE3721E48E1100298CBC /* OAuth */,
 				7B0FE94D21E0F68D00226EB7 /* Home */,
 				7B0FE94E21E0F68D00226EB7 /* Discover */,
@@ -255,6 +260,7 @@
 				7B0FE96221E122EB00226EB7 /* UIButton+Extension.swift */,
 				7B39B56521E89CCC0035E408 /* UIImageView+Extension.swift */,
 				7B39B56721E8A2F80035E408 /* UILabel+Extension.swift */,
+				7B133AC321F3A9BE005A3E29 /* UIBarButtonItem+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -266,6 +272,14 @@
 				7B12454D21E24F590056C342 /* VisitorView.swift */,
 			);
 			path = Visitor;
+			sourceTree = "<group>";
+		};
+		7B133AC021F382CE005A3E29 /* Compose */ = {
+			isa = PBXGroup;
+			children = (
+				7B133AC121F382EC005A3E29 /* ComposeViewController.swift */,
+			);
+			path = Compose;
 			sourceTree = "<group>";
 		};
 		7B17B95221EA2FB700C75F08 /* StatusCell */ = {
@@ -445,10 +459,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B133AC421F3A9BE005A3E29 /* UIBarButtonItem+Extension.swift in Sources */,
 				7BA75EE621E73B6C0050E5AF /* UserAccountViewModel.swift in Sources */,
 				7B39B56221E8974E0035E408 /* WelcomeViewController.swift in Sources */,
 				7B17B95E21EA420E00C75F08 /* StatusCellTopView.swift in Sources */,
 				7BA75EEB21E7A87C0050E5AF /* NewFeatureCell.swift in Sources */,
+				7B133AC221F382EC005A3E29 /* ComposeViewController.swift in Sources */,
 				7B3B5BCA21ECF64E004B3277 /* WBRefreshControl.swift in Sources */,
 				7B0FE95C21E0F82100226EB7 /* ProfileTableViewController.swift in Sources */,
 				7B3B5BC521ECCCC3004B3277 /* StatusRetweetedCell.swift in Sources */,

@@ -9,6 +9,25 @@
 import UIKit
 
 class MainViewController: UITabBarController {
+    
+    @objc private func clickComposedButton() {
+        
+        
+        //print("点我。。。。。。。。。。")
+        //判断用户是否登录
+        var vc:UIViewController
+        if UserAccountViewModel.sharedUserAccount.userLogon {
+            
+            vc = ComposeViewController()
+        }else {
+            
+            vc = OAuthViewController()
+        }
+        
+        let nav = UINavigationController(rootViewController: vc)
+        present(nav, animated: true, completion: nil)
+        
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,14 +37,28 @@ class MainViewController: UITabBarController {
             print("\(result)")
         
         } */
-        setupComposedButton()
-        addChildViewControllers()
        
+        addChildViewControllers()
+        setupComposedButton()
+       
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        //创建tabbar中的所有控制器对应的按钮
+        super.viewWillAppear(animated)
+        //将撰写按钮移动到最前面
+        tabBar.bringSubviewToFront(composedButton)
+        
+        
+        
     }
     
     //懒加载控件
     private lazy var composedButton: UIButton = UIButton(imageName: "tabbar_compose_icon_add", backImageName: "babbat_compose_button")
-    
+}
+
+//设置界面
+extension MainViewController {
     
     //设置撰写按钮
     private func setupComposedButton() {
@@ -43,28 +76,6 @@ class MainViewController: UITabBarController {
     }
     
     
-    override func viewWillAppear(_ animated: Bool) {
-        //创建tabbar中的所有控制器对应的按钮
-        super.viewWillAppear(animated)
-        //将撰写按钮移动到最前面
-        tabBar.bringSubviewToFront(composedButton)
-        
-        
-        
-    }
-    
-    @objc private func clickComposedButton() {
-        
-       
-    }
-
-    
-    
-
-}
-
-//设置界面
-extension MainViewController {
     //添加所有控制器
     private func addChildViewControllers() {
         tabBar.tintColor = UIColor.orange

@@ -17,9 +17,11 @@ extension UIButton {
         setImage(UIImage(named: imageName + "_highlighted"), for: .highlighted)
         
         //设置按钮背景图像
-        setBackgroundImage(UIImage(named: backImageName!), for: .normal)
-        setBackgroundImage(UIImage(named: backImageName! + "_highlighted"), for: .highlighted)
-        
+        // 设置按钮背景图像
+        if let backImageName = backImageName {
+            setBackgroundImage(UIImage(named: backImageName), for: .normal)
+            setBackgroundImage(UIImage(named: backImageName + "_highlighted"), for: .highlighted)
+        }
         //根据背景图片的大小调整尺寸
         sizeToFit()
         
